@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ai là triệu phú</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/fontAwesome/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/grid.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Welcome Section -->
+      <div class="welcome__start">
+        <button class="btn btn-primary" id="play-btn">Chơi Ngay</button>
+
+        <div class="footer">
+          <p class="copyright-txt">
+            © 2022, Copyright by Slayer Coder
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Section  -->
+      <div class="play-container hide">
+        <div class="grid wide">
+          <div class="row height-100">
+            <div class="col l-8 m-12 c-12">
+              <h2 class="name-player">
+                Xin Chào, <span class="name-user">---</span>
+              </h2>
+
+              <div class="time-count">
+                <span class="second-number">30</span>
+              </div>
+
+              <div class="container">
+                <div class="question__box">
+                  <div id="question">Demo</div>
+                </div>
+
+                <div class="answer__box" id="btn-answers"></div>
+              </div>
+            </div>
+
+            <div class="col l-4 m-12 c-0 mg-top">
+              <div class="container__moneylist">
+                <ul class="pin-money__list">
+                  <li class="pin-money__item">
+                    15
+                    <span class="money-label">1,000,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    14
+                    <span class="money-label">500,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    13
+                    <span class="money-label">250,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    12
+                    <span class="money-label">125,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    11
+                    <span class="money-label">64,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    10
+                    <span class="money-label">32,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    9
+                    <span class="money-label">14,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    8
+                    <span class="money-label">8,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    7
+                    <span class="money-label">4,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    6
+                    <span class="money-label">2,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    5
+                    <span class="money-label">1,000</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    4
+                    <span class="money-label">500</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    3
+                    <span class="money-label">300</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    2
+                    <span class="money-label">200</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                  <li class="pin-money__item">
+                    1 <span class="money-label">100</span>
+                    <i class="fas fa-dollar-sign"></i>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Modal username -->
+      <div class="modal">
+        <div class="modal__body flex">
+          <h3>Vui lòng nhập tên người dùng để bắt đầu!</h3>
+          <div class="form-group flex">
+            <input
+              type="text"
+              name=""
+              placeholder="Nhập tên của bạn..."
+              class="txtName"
+              id=""
+            />
+            <button type="submit" class="btn btn-primary btn-start btn-disable">
+              Bắt đầu
+            </button>
+          </div>
+        </div>
+      </div>
+      <!--Modal overgame -->
+      <div class="modal-notification">
+        <div class="modal__content flex">
+          <h3>Rất Tiếc! Bạn đã Thua :(</h3>
+          <p class="message"></p>
+          <button class="btn btn-primary backBtn">Quay về màn chính</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/Data/question.js"></script>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

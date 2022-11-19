@@ -1,0 +1,398 @@
+:root {
+  --primary-color: #1746b2;
+  --secondary-color: #c92d8e;
+  --white: #ffffff;
+  --black: #000000;
+  --text: #333333;
+  --correct-btn: #26bd53;
+  --wrong-btn: #d62413;
+}
+
+/* RESET CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  user-select: none;
+  /* pointer-events: none;  */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  background-image: url("../assets/img/bg_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.btn {
+  padding: 1.2rem 2.4rem;
+  border-radius: 2.8rem;
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 1.4rem;
+  padding: 1.4rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  transform: scale(1) !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.btn-disable {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+  border: none !important;
+}
+
+.wrong-btn {
+  background-color: var(--wrong-btn) !important;
+}
+
+.blink-btn {
+  animation: blinkBtn 0.5s ease infinite;
+  animation-delay: 0.8s;
+}
+
+@keyframes blinkBtn {
+  0% {
+    background-color: var(--secondary-color);
+  }
+  50% {
+    background-color: var(--correct-btn);
+  }
+}
+
+.app {
+  position: relative;
+  height: 100%;
+}
+
+.welcome__start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.footer {
+  position: relative;
+  bottom: -300px;
+}
+
+.copyright-txt {
+  font-size: 1.6rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.copyright-txt > a:hover {
+  color: var(--primary-color);
+}
+
+.btn-primary {
+  width: 280px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  border: 2px solid var(--secondary-color);
+}
+
+.modal {
+  position: absolute;
+  top: 50px;
+  left: 26%;
+  right: -30%;
+
+  background-color: var(--white);
+  width: 50%;
+  height: 50%;
+  border-radius: 2.8rem;
+  padding: 2.4rem;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.modal__body {
+  flex-direction: column;
+}
+
+.modal__body h3 {
+  font-size: 1.8rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.form-group {
+  margin-top: 2.4rem;
+  flex-direction: column;
+}
+
+.txtName {
+  border: 1px solid #ccc;
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+  width: 100%;
+  outline: none;
+
+  font-size: 1.6rem;
+  color: var(--text);
+
+  margin-bottom: 2.6rem;
+}
+
+.txtName:hover {
+  border: 2px solid var(--primary-color);
+}
+
+/* Play page */
+.play-container {
+  margin-top: 1.8rem;
+  height: 100%;
+}
+
+.name-player {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 2.4rem;
+  padding: 1.6rem 0;
+
+  text-align: center;
+}
+
+.time-count {
+  border: 2px solid var(--white);
+  border-radius: 2.8rem;
+  padding: 1.6rem;
+  width: 10%;
+}
+
+.time-count .second-number {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-left: 6px;
+}
+
+.container {
+  height: 50%;
+  padding: 1.2rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+
+  position: relative;
+  top: 25%;
+}
+
+.question__box {
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 100%;
+
+  border-top-left-radius: 4.5rem;
+  border-bottom-right-radius: 4.5rem;
+}
+
+#question {
+  color: #fff;
+  text-align: center;
+  margin-top: 2.6rem;
+  font-size: 2.2rem;
+}
+
+.answer__box {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin: 5rem 0;
+  gap: 14px;
+  width: 100%;
+}
+
+#btn-answers {
+  width: 100%;
+  color: var(--white);
+  font-size: 1.4rem;
+  padding: 1.4rem;
+}
+.btn {
+  background-color: var(--primary-color);
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.container__moneylist {
+  background-color: var(--white);
+  color: var(--text);
+  height: 90%;
+  padding: 1.4rem;
+
+  border-radius: 1.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pin-money__list {
+  margin: auto 0;
+  padding: 1.4rem;
+
+  width: 100%;
+}
+
+.pin-money__item {
+  padding: 0.6rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.pin-money__item i {
+  font-size: 1.8rem;
+}
+
+.pin-money__item.active {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border-radius: 1.2rem;
+}
+
+.money-label {
+  margin-left: 2.8rem;
+}
+
+/* Notification */
+
+.modal-notification {
+  position: absolute;
+  top: 50px;
+  left: 26%;
+  right: -30%;
+
+  background-color: var(--white);
+  width: 50%;
+  height: 50%;
+
+  border-radius: 2.8rem;
+
+  padding: 2.4rem;
+
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.modal__content {
+  flex-direction: column;
+}
+
+.message {
+  font-size: 1.8rem;
+  color: var(--text);
+  padding: 1.6rem 0;
+  margin: 1.3rem 0;
+}
+
+/* RESPONSIVE */
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .app {
+    overflow-y: scroll;
+  }
+  .container__moneylist {
+    height: 100%;
+    justify-content: center;
+  }
+  .mg-top {
+    margin-top: 1.8rem;
+  }
+  .question__box {
+    padding: 2.8rem 0;
+  }
+  .question__box h2 {
+    margin-top: 0;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .modal {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .time-count {
+    margin: 0 auto;
+    width: 20%;
+    padding: 1.2rem;
+  }
+  .question__box {
+    padding: 2.8rem 0;
+  }
+  .question__box h2 {
+    margin-top: 0;
+  }
+  .answer__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-notification {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  .footer {
+    bottom: -250px;
+  }
+}
